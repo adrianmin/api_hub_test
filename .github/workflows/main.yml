@@ -16,6 +16,6 @@ jobs:
       - name: Run Reflect tests
         run: curl
              -X POST
-             -H "$KEY_HEADER
+             -H "$KEY_HEADER"
              -s 
               https://api.reflect.run/v1/suites/Sample/executions
