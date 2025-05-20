@@ -1,0 +1,17 @@
+name: Merge-Tests
+on:
+  push:
+    branches: [ master ]
+
+env:
+  KEY_HEADER: "X-API-KEY: <API_KEY>"
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run Reflect tests
+        run: curl
+             -X POST
+             -H "$KEY_HEADER
+             -s https://api.reflect.run/v1/suites/<suite-id>/executions
