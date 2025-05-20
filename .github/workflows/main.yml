@@ -4,7 +4,7 @@ on:
     branches: [ master ]
 
 env:
-  KEY_HEADER: "X-API-KEY: <API_KEY>"
+  KEY_HEADER: "X-API-KEY: ${{secrets.API-KEY}}"
 
 jobs:
   run-tests:
@@ -14,4 +14,4 @@ jobs:
         run: curl
              -X POST
              -H "$KEY_HEADER
-             -s https://api.reflect.run/v1/suites/<suite-id>/executions
+             -s https://api.reflect.run/v1/suites/Sample/executions
